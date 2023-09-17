@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function WeatherForm() {
+export default function WeatherForm({dataFetcher}) {
     const [location, setLocation] = useState("");
     const handleChange = (evt) => {
         setLocation(evt.target.value)
@@ -8,7 +8,7 @@ export default function WeatherForm() {
     const handleSubmit = (evt) => {
         evt.preventDefault();
         console.log(location);
-        
+        dataFetcher(location);
         setLocation("");
     }
     return (
