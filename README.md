@@ -1,5 +1,5 @@
 # react-weatherapp
-Version of weatherApp made using react
+A react version of weatherApp
 # To run:
 npm install
 
