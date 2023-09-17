@@ -1,5 +1,4 @@
 import Weather from './Weather'
-import './App.css'
 
 
 function App() {
@@ -12,4 +11,4 @@ function App() {
 
 }
 
-export default App
+export default App;

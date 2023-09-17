@@ -23,7 +23,7 @@ export default function Weather() {
     }
 
     return (
-        <div>
+        <div className="weatherClass">
             <h1>WeatherApp</h1>
             <WeatherForm dataFetcher={fetchForecast}/>
             { forecast && 
