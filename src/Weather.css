@@ -1,4 +1,18 @@
+.main {
+    min-height: 600px;
+    min-width: 450px;
+    border: 0.1px solid rgb(199, 199, 199);
+    border-radius: 1rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+}
+
+.wrapper {
+    margin-top: 6rem;
+}
+
 .weatherClass {
+    width: 75%;
+    margin: auto;
     border: 0.1px solid rgb(199, 199, 199);
     border-radius: 1rem;
     margin-top: 2rem;
