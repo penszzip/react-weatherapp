@@ -1,6 +1,7 @@
 import { useState } from "react";
 import WeatherForm from "./WeatherForm";
-import getURL from "./utils.js"
+import getURL from "./utils.js";
+import "./Weather.css";
 
 export default function Weather() {
     const [forecast, setForecast] = useState(null);
@@ -26,15 +27,15 @@ export default function Weather() {
     }
 
     return (
-        <div className="weatherClass">
+        <div>
             <h1>WeatherApp</h1>
             <WeatherForm dataFetcher={fetchForecast}/>
             { forecast && 
-                <div>
+                <div className="weatherClass">
                     { heading && <h2>{heading}</h2> }
+                    <h3>{icon}</h3>
                     <p>Temperature: {forecast.temperature} degrees Celsius</p>
                     <p>Wind speed: {forecast.windspeed} km/h</p>
-                    <p>{icon}</p>
             </div> }
         </div>
     )
