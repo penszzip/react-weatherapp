@@ -1,9 +1,11 @@
 import { useState } from "react";
 import WeatherForm from "./WeatherForm";
+import getURL from "./utils.js"
 
 export default function Weather() {
     const [forecast, setForecast] = useState(null);
     const [heading, setHeading] = useState("");
+    const [icon, setIcon] = useState("");
     async function fetchForecast(location) {
         
         const response = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${location}`);
@@ -19,6 +21,7 @@ export default function Weather() {
 
         setHeading(location);
         setForecast(current_weather);
+        setIcon(getURL(current_weather.weathercode));
 
     }
 
@@ -31,6 +34,7 @@ export default function Weather() {
                     { heading && <h2>{heading}</h2> }
                     <p>Temperature: {forecast.temperature} degrees Celsius</p>
                     <p>Wind speed: {forecast.windspeed} km/h</p>
+                    <p>{icon}</p>
             </div> }
         </div>
     )
